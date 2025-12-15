@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DONUT'S GEMOY</title>
+    <style>
+        body {
+            background-image: url(BG\ DONAT\ 2.avif);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+        header {
+            background-color: orange;
+            color: white;
+            padding: 27px;
+            display: flex;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 28px;
+            margin-right: 10px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .dashboard {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .dashboard-item {
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        .dashboard-item .logo {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .menu {
+            padding: 20px;
+            text-align: center;
+        }
+        .menu h2 {
+            margin-bottom: 20px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .menu-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .transaction {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .transaction h2 {
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input, select, button {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #8B4513;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #654321;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">☕</div>
+        <h1>DONUT'S GEMOY</h1>
+    </header>
+
+    <section class="dashboard">
+        <div class="dashboard-item">
+            <div class="logo">☕</div>
+            <div>
+                <h3>Total Menu</h3>
+                <p>6</p> <!-- Angka random -->
+            </div>
+        </div>
+        <div class="dashboard-item">
+            <div class="logo">💰</div>
+            <div>
+                <h3>Transaksi Hari ini</h3>
+                <p>78</p> <!-- Angka random -->
+            </div>
+        </div>
+        <div class="dashboard-item">
+            <div class="logo">💵</div>
+            <div>
+                <h3>Pendapatan Hari ini</h3>
+                <p>Rp 500.000</p> <!-- Angka random -->
+            </div>
+        </div>
+        <div class="dashboard-item">
+            <div class="logo">👥</div>
+            <div>
+                <h3>Pelanggan Hari ini</h3>
+                <p>48</p> <!-- Angka random -->
+            </div>
+        </div>
+    </section>
+
+    <section class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="donat coklat.jpg" alt="Donat topping Coklat">
+                <h4>Donat topping Coklat"</h4>
+                <p>Rp 3.000</p>
+            </div>
+            <div class="menu-item">
+                <img src="resep-donat-kentang-keju-camila-20230103103346.webp" alt="Donat topping keju">
+                <h4>Donat topping keju</h4>
+                <p>Rp 3.000</p>
+            </div>
+            <div class="menu-item">
+                <img src="donat matcha.jpg" alt="Donat topping Matcha">
+                <h4>Donat topping Matcha</h4>
+                <p>Rp 3.000</p>
+            </div>
+            <div class="menu-item">
+                <img src="pisang coklat.jpg" alt="pisang pasir coklat">
+                <h4>pisang pasir coklat</h4>
+                <p>Rp 7.000</p>
+                <div>
+                </div class="menu-item">
+                </div>
+            <div class="menu-item">
+                <img src="pasir ck keju.jpeg" alt="Pisang Pasir Coklat keju">
+                <h4>Pisang Pasir Coklat keju</h4>
+                <p>Rp 7.000</p>
+                <div>
+                </div class="menu-item">
+                </div>
+            <div class="menu-item">
+                <img src="psir matcha.jpeg" alt="Pisang Pasir Matcha">
+                <h4>Pisang Pasir Matcha</h4>
+                <p>Rp 8.000</p>
+                <div>
+                </div class="menu-item">
+        </div>
+    </section>
+
+    <section class="transaction">
+        <h2>Transaksi Pembayaran</h2>
+        <form action="#" method="post">
+            <label for="nama">Nama Customer:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="kopi">Pilih Kopi:</label>
+            <select id="kopi" name="kopi" required>
+                <option value="">-- Pilih Kopi --</option>
+                <option value="Donat topping Coklat">Donat topping Coklat - Rp 3.000</option>
+                <option value="Donat topping keju">Donat topping keju - Rp 3.000</option>
+                <option value="Donat topping Matcha">Donat topping Matcha - Rp 3.000</option>
+                <option value="pisang pasir coklat">pisang pasir coklat - Rp 7.000</option>
+                <option value="Pisang Pasir Coklat keju">Pisang pasir coklat keju - Rp.7.000</option>
+                <option value="Pisang Pasir Matcha">Pisang pasir matcha- Rp.8.000</option>
+            </select>
+
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" name="jumlah" min="1" required>
+
+            <label for="metode">Metode Pembayaran:</label>
+            <select id="metode" name="metode" required>
+                <option value="">-- Pilih Metode --</option>
+                <option value="cash">Tunai</option>
+                <option value="transfer">Transfer Bank</option>
+                <option value="ewallet">E-Wallet</option>
+            </select>
+
+            <button type="submit">Bayar Sekarang</button>
+        </form>
+    </section>
+</body>
+</html>
+
+</body>
+</html>
