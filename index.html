@@ -3,215 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DONUT'S GEMOY</title>
-    <style>
-        body {
-            background-image: url(BG\ DONAT\ 2.avif);
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-        }
-        header {
-            background-color: orange;
-            color: white;
-            padding: 27px;
-            display: flex;
-            align-items: center;
-        }
-        header .logo {
-            font-size: 28px;
-            margin-right: 10px;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .dashboard {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-            background-color: white;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .dashboard-item {
-            text-align: center;
-            display: flex;
-            align-items: center;
-        }
-        .dashboard-item .logo {
-            font-size: 24px;
-            margin-right: 10px;
-        }
-        .menu {
-            padding: 20px;
-            text-align: center;
-        }
-        .menu h2 {
-            margin-bottom: 20px;
-        }
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-        .menu-item {
-            background-color: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .menu-item img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-        .transaction {
-            padding: 20px;
-            background-color: white;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .transaction h2 {
-            margin-bottom: 20px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            margin-bottom: 5px;
-        }
-        input, select, button {
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #8B4513;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #654321;
-        }
-    </style>
+    <title>🍩DONUT'S GEMOY</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="logo">☕</div>
-        <h1>DONUT'S GEMOY</h1>
-    </header>
+    <div id="login-container" class="container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Belum punya akun? <a href="#" id="showRegister">Daftar</a></p>
+        </div>
+        <div class="register-form" style="display: none;">
+            <h2>Registrasi</h2>
+            <form id="registerForm">
+                <input type="text" id="regName" placeholder="Nama Lengkap" required>
+                <input type="email" id="regEmail" placeholder="Email" required>
+                <input type="text" id="regPhone" placeholder="Nomor HP" required>
+                <input type="password" id="regPassword" placeholder="Password" required>
+                <button type="submit">Daftar</button>
+            </form>
+            <p>Sudah punya akun? <a href="#" id="showLogin">Login</a></p>
+        </div>
+    </div>
 
-    <section class="dashboard">
-        <div class="dashboard-item">
-            <div class="logo">☕</div>
-            <div>
-                <h3>Total Menu</h3>
-                <p>6</p> <!-- Angka random -->
+    <div id="main-content" style="display: none;">
+        <nav>
+            <div class="logo">
+                <h1>🍩DONUT'S GEMOY</h1>
             </div>
-        </div>
-        <div class="dashboard-item">
-            <div class="logo">💰</div>
-            <div>
-                <h3>Transaksi Hari ini</h3>
-                <p>78</p> <!-- Angka random -->
-            </div>
-        </div>
-        <div class="dashboard-item">
-            <div class="logo">💵</div>
-            <div>
-                <h3>Pendapatan Hari ini</h3>
-                <p>Rp 500.000</p> <!-- Angka random -->
-            </div>
-        </div>
-        <div class="dashboard-item">
-            <div class="logo">👥</div>
-            <div>
-                <h3>Pelanggan Hari ini</h3>
-                <p>48</p> <!-- Angka random -->
-            </div>
-        </div>
-    </section>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#checkout">Checkout</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
 
-    <section class="menu">
-        <h2>Our Menu</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <img src="donat coklat.jpg" alt="Donat topping Coklat">
-                <h4>Donat topping Coklat"</h4>
-                <p>Rp 3.000</p>
-            </div>
-            <div class="menu-item">
-                <img src="resep-donat-kentang-keju-camila-20230103103346.webp" alt="Donat topping keju">
-                <h4>Donat topping keju</h4>
-                <p>Rp 3.000</p>
-            </div>
-            <div class="menu-item">
-                <img src="donat matcha.jpg" alt="Donat topping Matcha">
-                <h4>Donat topping Matcha</h4>
-                <p>Rp 3.000</p>
-            </div>
-            <div class="menu-item">
-                <img src="pisang coklat.jpg" alt="pisang pasir coklat">
-                <h4>pisang pasir coklat</h4>
-                <p>Rp 7.000</p>
-                <div>
-                </div class="menu-item">
+        <section id="home" class="page active">
+            <h1>Selamat Datang di DONUT'S GEMOY</h1>
+            <p>Tugas E-comerce Syafira,Nazwa,Apriani,Afrida,Ara,Naldi</p>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="donat coklat.jpg" alt="Donat topping Coklat">
+                    <h4>Donat topping Coklat</h4>
+                    <p>Donat lembut dengan balutan coklat manis yang lumer</p>
+                    <p>Rp 3.000</p>
+                    <button onclick="addToCart({id:1, title:'Donat topping Coklat', price:3000, qty:1})">Tambah ke Keranjang</button>
                 </div>
-            <div class="menu-item">
-                <img src="pasir ck keju.jpeg" alt="Pisang Pasir Coklat keju">
-                <h4>Pisang Pasir Coklat keju</h4>
-                <p>Rp 7.000</p>
-                <div>
-                </div class="menu-item">
+                <div class="menu-item">
+                    <img src="resep-donat-kentang-keju-camila-20230103103346.webp" alt="Donat topping keju">
+                    <h4>Donat topping keju</h4>
+                    <p>Donat empuk ditaburi keju parut melimpah</p>
+                    <p>Rp 3.000</p>
+                    <button onclick="addToCart({id:2, title:'Donat topping keju', price:3000, qty:1})">Tambah ke Keranjang</button>
                 </div>
-            <div class="menu-item">
-                <img src="psir matcha.jpeg" alt="Pisang Pasir Matcha">
-                <h4>Pisang Pasir Matcha</h4>
-                <p>Rp 8.000</p>
-                <div>
-                </div class="menu-item">
-        </div>
-    </section>
+                <div class="menu-item">
+                    <img src="donat matcha.jpg" alt="Donat topping Matcha">
+                    <h4>Donat topping Matcha</h4>
+                    <p>Perpaduan donat lembut dengan topping matcha</p>
+                    <p>Rp 3.000</p>
+                    <button onclick="addToCart({id:3, title:'Donat topping Matcha', price:3000, qty:1})">Tambah ke Keranjang</button>
+                </div>
+                <div class="menu-item">
+                    <img src="donattiramisu.jpg" alt="Donat topping Tiramisu">
+                    <h4>Donat topping Tiramisu</h4>
+                    <p>Perpaduan rasa kopi yang khas dengan krim lembut</p>
+                    <p>Rp 5.000</p>
+                    <button onclick="addToCart({id:4, title:'Donat topping Tiramisu', price:7000, qty:1})">Tambah ke Keranjang</button>
+                </div>
+                <div class="menu-item">
+                    <img src="donatstrowbery.jpg" alt="Donat topping Strawberry">
+                    <h4>Donat topping Strawberry</h4>
+                    <p>Manis segar saus strawberry</p>
+                    <p>Rp 5.000</p>
+                    <button onclick="addToCart({id:5, title:'Donat topping Strawberry', price:7000, qty:1})">Tambah ke Keranjang</button>
+                </div>
+                <div class="menu-item">
+                    <img src="donatcoklatkacang.webp" alt="Donat topping Coklat Kacang">
+                    <h4>Donat topping Coklat Kacang</h4>
+                    <p>Lelehan coklat manis berpadu dengan taburan kacang</p>
+                    <p>Rp 5.000</p>
+                    <button onclick="addToCart({id:6, title:'Donat topping Coklat Kacang', price:8000, qty:1})">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </section>
 
-    <section class="transaction">
-        <h2>Transaksi Pembayaran</h2>
-        <form action="#" method="post">
-            <label for="nama">Nama Customer:</label>
-            <input type="text" id="nama" name="nama" required>
+        <section id="profil" class="page">
+            <h2>Profil Saya</h2>
+            <p>Nama: <span id="profile-name"></span></p>
+            <p>Email: <span id="profile-email"></span></p>
+            <p>No HP: <span id="profile-phone"></span></p>
+        </section>
 
-            <label for="kopi">Pilih Kopi:</label>
-            <select id="kopi" name="kopi" required>
-                <option value="">-- Pilih Kopi --</option>
-                <option value="Donat topping Coklat">Donat topping Coklat - Rp 3.000</option>
-                <option value="Donat topping keju">Donat topping keju - Rp 3.000</option>
-                <option value="Donat topping Matcha">Donat topping Matcha - Rp 3.000</option>
-                <option value="pisang pasir coklat">pisang pasir coklat - Rp 7.000</option>
-                <option value="Pisang Pasir Coklat keju">Pisang pasir coklat keju - Rp.7.000</option>
-                <option value="Pisang Pasir Matcha">Pisang pasir matcha- Rp.8.000</option>
-            </select>
+        <section id="checkout" class="page">
+            <h2>Checkout</h2>
+            <button id="checkoutBtn">Lihat Keranjang & Checkout</button>
+            <div id="checkoutModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Keranjang Belanja</h2>
+                    <div id="cartItems"></div>
+                    <p>Total: Rp <span id="cartTotal">0</span></p>
+                    <form id="checkoutForm">
+                        <input type="text" id="checkoutName" placeholder="Nama" required>
+                        <input type="text" id="checkoutAddress" placeholder="Alamat" required>
+                        <button type="submit">Bayar Sekarang</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
 
-            <label for="jumlah">Jumlah:</label>
-            <input type="number" id="jumlah" name="jumlah" min="1" required>
-
-            <label for="metode">Metode Pembayaran:</label>
-            <select id="metode" name="metode" required>
-                <option value="">-- Pilih Metode --</option>
-                <option value="cash">Tunai</option>
-                <option value="transfer">Transfer Bank</option>
-                <option value="ewallet">E-Wallet</option>
-            </select>
-
-            <button type="submit">Bayar Sekarang</button>
-        </form>
-    </section>
-</body>
-</html>
-
+    <script src="js"></script>
 </body>
 </html>

@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('BG DONAT 2.avif');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-form, .register-form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form h2, .register-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form input, .register-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-form button, .register-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-form button:hover, .register-form button:hover {
+    background-color: #218838;
+}
+
+.login-form p, .register-form p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-form a, .register-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-form a:hover, .register-form a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1 {
+    margin: 0;
+    color: yellow;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu li {
+    margin-left: 20px;
+}
+
+nav .menu a {
+    color: white;
+    text-decoration: none;
+}
+
+nav .menu a:hover {
+    text-decoration: underline;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page.active {
+    display: block;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu-item h4 {
+    margin: 10px 0;
+}
+
+.menu-item p {
+    margin: 5px 0;
+}
+
+.menu-item button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-item button:hover {
+    background-color: #218838;
+}
+
+#checkoutBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#checkoutBtn:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+#cartItems {
+    margin: 20px 0;
+}
+
+#cartItems div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#checkoutForm input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#checkoutForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkoutForm button:hover {
+    background-color: #218838;
+}
